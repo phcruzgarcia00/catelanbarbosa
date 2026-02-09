@@ -41,14 +41,16 @@
       font-size: 1rem;
     }
 
-    /* ==========================================
-       HEADER
+   /* ==========================================
+    HEADER
     ========================================== */
     #mainHeader {
       background-color: #E6E6E6;
       border-bottom: 1px solid #ccc;
-      position: sticky;
+      position: absolute;  /* Alterado de sticky para fixed */
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
     }
 
@@ -142,30 +144,31 @@
     }
 
     /* ==========================================
-       HERO
-    ========================================== */
-    .hero-section {
-      background: linear-gradient(135deg, #1A1B24, #1A1B24);
-      padding: 2rem 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+   HERO
+========================================== */
+.hero-section {
+  background: linear-gradient(135deg, #1A1B24, #1A1B24);
+  padding: 4rem 1rem 2rem; /* Aumentei o padding-top para 4rem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px; /* Espaço para o header fixo */
+}
 
-    .hero-container {
-      max-width: 1200px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-    .hero-logo img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 0.5rem;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-      max-height: 200px;
-    }
+.hero-logo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  max-height: 200px;
+}
 
     /* ==========================================
        ABOUT — CENTRALIZADO (NOVAS CORES)
@@ -377,67 +380,7 @@
       color: #E6E6E6;
     }
 
-    /* ==========================================
-       VIDEO SECTION
-    ========================================== */
-    .video-section {
-      background-color: #E6E6E6;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-
-    .video-container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: #E6E6E6;
-      padding: 2.5rem;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .video-title {
-      font-size: 1.8rem;
-      color: #1A1B24;
-      margin-bottom: 1rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-
-    .video-title::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background-color: #1A1B24;
-    }
-
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 600px;
-      aspect-ratio: 16/9;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      border: 3px solid #1A1B24;
-      margin: 2rem auto;
-    }
-
-    .video-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .video-description {
-      color: #1A1B24;
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-top: 1rem;
-    }
+    
 
     /* ==========================================
        CONTACT
@@ -473,7 +416,7 @@
       transform: translateX(-50%);
       width: 70px;
       height: 3px;
-      background-color: #1A1B24;
+      background-color: #1a1b2400;
     }
 
     .contact-text {
@@ -690,36 +633,8 @@
       <div class="highlight-box">
         <p>Saiba que a legislação brasileira e internacional protege os passageiros aéreos. Você pode ter direito a reembolso integral, indenização por danos materiais e morais, e assistência durante a espera.</p>
       </div>
-
-      <div class="button-group">
-        <p class="content-text" style="text-align: center; margin-bottom: 1.2rem; font-size: 1.15rem; font-weight: 500; color: #E6E6E6;">
-          Fale agora e descubra se você tem direito à devolução de valores, reembolso ou indenização.
-        </p>
-        <a href="https://wa.me/5517996815440" target="_blank" class="whatsapp-button">
-          ➤ Fale Agora no WhatsApp
-        </a>
-      </div>
-    </div>
   </section>
 
-  <!-- ===== VIDEO SECTION ===== -->
-  <section id="video" class="video-section">
-    <div class="video-container">
-      <h2 class="video-title">Entenda seus Direitos</h2>
-      <div class="video-wrapper">
-        <!-- Substitua o link do YouTube pelo seu vídeo -->
-        <iframe 
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0&showinfo=0" 
-          title="Vídeo sobre Direitos dos Passageiros Aéreos"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-      </div>
-      <p class="video-description">
-        Neste vídeo, explicamos detalhadamente quais são os seus direitos como passageiro aéreo e como a legislação protege você em situações de atrasos, cancelamentos e outros problemas com companhias aéreas.
-      </p>
-    </div>
-  </section>
 
   <!-- ===== CONTATO (PRINCIPAL) ===== -->
   <section id="contact" class="contact-section">
