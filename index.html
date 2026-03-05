@@ -18,6 +18,14 @@
   --text-gray: #64748b;
   --light-bg: #f8fafc;
   --white: #ffffff;
+  
+  /* ========================================== */
+  /* CONTROLES DA LOGO - AJUSTE AQUI */
+  /* ========================================== */
+  --logo-size: 80px;
+  --logo-margin-bottom: 0.5rem;
+  --logo-offset-x: 0px;
+  --logo-offset-y: 0px;
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -52,9 +60,11 @@ nav {
   align-items: center;
 }
 .logo-cb {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 0.5rem;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  margin-bottom: var(--logo-margin-bottom);
+  object-fit: contain;
+  transform: translate(var(--logo-offset-x), var(--logo-offset-y));
 }
 .logo-text {
   text-align: center;
@@ -118,6 +128,31 @@ nav {
   background: #128C7E;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+/* Menu Hambúrguer Mobile */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary-dark);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 /* Ícone de Avião Flutuante WhatsApp */
 .whatsapp-airplane {
@@ -383,7 +418,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .team-card {
@@ -449,8 +484,6 @@ section {
   max-width: 1200px;
   margin: 0 auto 3rem;
 }
-
-/* ATUALIZADO: Estilos para suportar o vídeo de fundo */
 .airline-problems {
   background: var(--primary-dark);
   color: var(--white);
@@ -461,8 +494,6 @@ section {
   position: relative;
   overflow: hidden;
 }
-
-/* NOVO: Container do Vídeo */
 .practice-video-background {
   position: absolute;
   top: 0;
@@ -471,14 +502,11 @@ section {
   height: 100%;
   z-index: 0;
 }
-
 .practice-video-background video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-/* NOVO: Overlay Escuro para legibilidade */
 .practice-overlay {
   position: absolute;
   top: 0;
@@ -488,8 +516,6 @@ section {
   background: rgba(15, 23, 42, 0.85);
   z-index: 1;
 }
-
-/* NOVO: Garantir que o conteúdo fique acima do vídeo */
 .airline-problems h3,
 .airline-problems > p,
 .problems-grid,
@@ -497,7 +523,6 @@ section {
   position: relative;
   z-index: 2;
 }
-
 .airline-problems h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
@@ -666,9 +691,8 @@ section {
   color: var(--primary-dark);
   font-weight: 600;
 }
-
 /* ========================================== */
-/* FOOTER - NOVO */
+/* FOOTER */
 /* ========================================== */
 footer {
   background: var(--primary-dark);
@@ -727,10 +751,20 @@ footer {
   color: var(--accent-gold);
   text-decoration: none;
 }
-/* Responsive */
+
+/* ========================================== */
+/* RESPONSIVIDADE - MOBILE E TABLET */
+/* ========================================== */
+
+/* Tablet (até 968px) */
 @media (max-width: 968px) {
+  .hero {
+    margin-top: 100px;
+    padding: 6rem 1.5rem;
+    min-height: 600px;
+  }
   .hero h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .hero-description {
     font-size: 1.1rem;
@@ -739,17 +773,288 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+  .btn-whatsapp-large,
+  .btn-secondary-hero {
+    width: 100%;
+    max-width: 350px;
+    justify-content: center;
+  }
+  section {
+    padding: 4rem 1.5rem;
+  }
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
   .features-grid,
   .team-grid,
   .problems-grid,
   .contact-container {
     grid-template-columns: 1fr;
   }
+  .feature-card {
+    padding: 2rem;
+  }
+  .team-photo {
+    height: 300px;
+  }
+  .team-content {
+    padding: 2rem;
+  }
+  .airline-problems {
+    padding: 3rem 2rem;
+  }
+  .airline-problems h3 {
+    font-size: 2rem;
+  }
+  .contact-container {
+    gap: 2rem;
+  }
+  .contact-cta h3 {
+    font-size: 2rem;
+  }
   .nav-links {
     display: none;
   }
+  .hamburger-menu {
+    display: flex;
+  }
+  /* Menu Mobile Dropdown */
+  .nav-links.mobile-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    gap: 1.5rem;
+  }
+  .nav-links.mobile-active a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+  .nav-links.mobile-active .btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+  .logo-main {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+  .logo-sub {
+    font-size: 0.65rem;
+    letter-spacing: 6px;
+  }
+  .logo-line {
+    width: 100px;
+  }
+}
+
+/* Mobile (até 640px) */
+@media (max-width: 640px) {
+  .hero {
+    margin-top: 90px;
+    padding: 4rem 1rem;
+    min-height: 500px;
+  }
+  .hero h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .btn-whatsapp-large,
+  .btn-secondary-hero {
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+  }
+  .whatsapp-airplane {
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-airplane svg {
+    width: 30px;
+    height: 30px;
+  }
+  section {
+    padding: 3rem 1rem;
+  }
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+  .section-title p {
+    font-size: 1rem;
+  }
+  .about-intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .feature-card {
+    padding: 1.5rem;
+  }
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+  .mission-section {
+    padding: 3rem 1.5rem;
+  }
+  .mission-section h3 {
+    font-size: 1.6rem;
+  }
+  .mission-section p {
+    font-size: 1rem;
+  }
+  .team-photo {
+    height: 250px;
+  }
+  .team-content {
+    padding: 1.5rem;
+  }
+  .team-content h3 {
+    font-size: 1.5rem;
+  }
+  .team-oab {
+    font-size: 0.8rem;
+  }
+  .team-content p {
+    font-size: 0.9rem;
+  }
+  .airline-problems {
+    padding: 2.5rem 1.5rem;
+  }
+  .airline-problems h3 {
+    font-size: 1.6rem;
+  }
+  .airline-problems > p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .problems-grid {
+    gap: 1.5rem;
+  }
+  .problem-item {
+    gap: 0.8rem;
+  }
+  .problem-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .problem-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .problem-content h4 {
+    font-size: 1rem;
+  }
+  .problem-content p {
+    font-size: 0.85rem;
+  }
+  .rights-info {
+    padding: 1.5rem;
+  }
+  .rights-info p {
+    font-size: 1rem;
+  }
+  .contact-cta h3 {
+    font-size: 1.6rem;
+  }
+  .contact-cta p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .btn-whatsapp-cta {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .contact-info-box {
+    padding: 2rem 1.5rem;
+  }
+  .contact-info-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .contact-info-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .contact-info-details h4 {
+    font-size: 0.85rem;
+  }
+  .contact-info-details p {
+    font-size: 0.9rem;
+  }
+  .footer {
+    padding: 2rem 1rem;
+  }
+  .footer-logo {
+    font-size: 1.2rem;
+  }
   .footer-links {
     gap: 1rem;
+  }
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+  .logo-cb {
+    width: 60px;
+    height: 60px;
+  }
+  .logo-main {
+    font-size: 1.2rem;
+  }
+  .logo-sub {
+    font-size: 0.6rem;
+  }
+  .logo-line {
+    width: 80px;
+  }
+  nav {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Mobile Extra Pequeno (até 400px) */
+@media (max-width: 400px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  .btn-whatsapp-large,
+  .btn-secondary-hero {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.85rem;
+  }
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+  .logo-main {
+    font-size: 1rem;
+  }
+  .logo-sub {
+    display: none;
+  }
+  .logo-line {
+    display: none;
   }
 }
 </style>
@@ -759,26 +1064,28 @@ footer {
 <header>
   <nav>
     <div class="logo-container">
-      <!-- Logo CB SVG -->
-      <svg class="logo-cb" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- C -->
-        <path d="M35 25C25 25 20 35 20 50C20 65 25 75 35 75C40 75 43 73 45 70" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
-        <!-- B -->
-        <path d="M55 25V75M55 25H65C72 25 75 30 75 35C75 40 72 43 68 44C73 45 77 48 77 54C77 62 72 75 62 75H55" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
-        <!-- Linha decorativa -->
-        <path d="M30 78C35 82 50 85 70 78" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <!-- IMAGEM DA LOGO -->
+      <img src="ChatGPT Image 4 de mar. de 2026, 15_30_34-Photoroom.png" alt="Catelan e Barbosa Advocacia Logo" class="logo-cb">
+      
       <div class="logo-text">
         <h1 class="logo-main">CATELAN & BARBOSA</h1>
         <div class="logo-line"></div>
         <p class="logo-sub">ADVOCACIA</p>
       </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#equipe">Equipe</a></li>
-      <li><a href="#servicos">Serviços</a></li>
+    
+    <!-- Menu Hambúrguer Mobile -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio" onclick="toggleMenu()">Início</a></li>
+      <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+      <li><a href="#equipe" onclick="toggleMenu()">Equipe</a></li>
+      <li><a href="#servicos" onclick="toggleMenu()">Serviços</a></li>
       <li>
         <a href="https://wa.me/5517991223326?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
           class="btn-whatsapp"
@@ -792,6 +1099,7 @@ footer {
     </ul>
   </nav>
 </header>
+
 <!-- Ícone de Avião Flutuante WhatsApp -->
 <a href="https://wa.me/5517991223326?text=Olá!%20Gostaria%20de%20mais%20informações."
   class="whatsapp-airplane"
@@ -801,18 +1109,16 @@ footer {
     <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
   </svg>
 </a>
-<!-- Hero Section - COM VÍDEO DE FUNDO E TEXTO CENTRALIZADO -->
+
+<!-- Hero Section -->
 <section class="hero" id="inicio">
-  <!-- Vídeo de Fundo -->
   <div class="hero-video-background">
     <video autoplay muted loop playsinline poster="poster-image.jpg">
-      <source src="video aviao asa.mp4" type="video/mp4">
+      <source src="video aeroporto.mp4" type="video/mp4">
       Seu navegador não suporta vídeos HTML5.
     </video>
   </div>
-  <!-- Overlay Escuro -->
   <div class="hero-overlay"></div>
-  <!-- Conteúdo Centralizado -->
   <div class="hero-content">
     <h2>Soluções Jurídicas em Direito Aéreo</h2>
     <p class="hero-description">Especialistas em defesa dos direitos dos passageiros contra companhias aéreas. Protegemos você em casos de voos cancelados, atrasados, overbooking e muito mais.</p>
@@ -831,7 +1137,8 @@ footer {
     </div>
   </div>
 </section>
-<!-- About Section - CARDS BRANCOS -->
+
+<!-- About Section -->
 <section id="sobre">
   <div class="section-title">
     <h2>Sobre o Catelan e Barbosa Advocacia</h2>
@@ -886,6 +1193,7 @@ footer {
     <p>Proporcionar soluções jurídicas eficazes e estratégicas, protegendo os direitos dos passageiros em questões relacionadas a companhias aéreas com excelência, ética e comprometimento.</p>
   </div>
 </section>
+
 <!-- Team Section -->
 <section class="team-section" id="equipe">
   <div class="section-title">
@@ -893,25 +1201,23 @@ footer {
     <p>Advogadas especializadas prontas para defender seus direitos</p>
   </div>
   <div class="team-grid">
-    <!-- Dra. Helena Catelan -->
     <div class="team-card">
       <img src="helena.jpeg" alt="Dra. Helena Catelan" class="team-photo">
       <div class="team-content">
         <h3>Dra. Helena Catelan</h3>
         <span class="team-oab">Dra. Helena Catelan Soares de Carvalho – OAB/SP 454.821</span>
-        <p>Atuação especializada em Direito do Consumidor e Direito de Família, com atendimento ético, claro e personalizado. Defesa dos seus direitos em problemas com empresas, companhias aéreas, cobranças indevidas e reembolsos, além de divórcio, guarda, pensão alimentícia e inventário. Cada caso é tratado com estratégia e atenção, buscando soluções seguras e eficazes, para garantir sua tranquilidade e proteger o que é seu.</p>
+        <p>Atuação especializada em Direito do Consumidor e Direito de Família, com atendimento ético, claro e personalizado. Defesa dos seus direitos em problemas com empresas, companhias aéreas, cobranças indevidas e reembolsos, além de divórcio, guarda, pensão alimentícia e inventário.</p>
         <a href="#contato" class="team-link">
           Conheça o trabalho da Dra. Helena →
         </a>
       </div>
     </div>
-    <!-- Dra. Mariana Barbosa -->
     <div class="team-card">
       <img src="mariana.jpeg" alt="Dra. Mariana Barbosa Leite" class="team-photo">
       <div class="team-content">
         <h3>Dra. Mariana Barbosa Leite</h3>
         <span class="team-oab">Dra. Mariana Barbosa Leite – OAB/SP 491.921</span>
-        <p>Advogada especializada em Direito do Consumidor e Direito Bancário, pós-graduada em Direito Civil. Atua há mais de 4 anos na defesa dos consumidores, com foco no combate a práticas abusivas de instituições financeiras e grandes empresas. Possui experiência estratégica na área bancária, oferecendo soluções jurídicas seguras, claras e eficazes para proteção dos direitos do cliente.</p>
+        <p>Advogada especializada em Direito do Consumidor e Direito Bancário, pós-graduada em Direito Civil. Atua há mais de 4 anos na defesa dos consumidores, com foco no combate a práticas abusivas de instituições financeiras e grandes empresas.</p>
         <a href="#contato" class="team-link">
           Conheça o trabalho da Dra. Mariana →
         </a>
@@ -919,14 +1225,13 @@ footer {
     </div>
   </div>
 </section>
-<!-- Practice Areas - Airline Problems -->
+
+<!-- Practice Areas -->
 <section class="practice-areas" id="servicos">
   <div class="section-title">
     <h2>Áreas de Atuação</h2>
   </div>
   <div class="airline-problems">
-    
-    <!-- INÍCIO DO VÍDEO DE FUNDO -->
     <div class="practice-video-background">
       <video autoplay muted loop playsinline>
         <source src="video aeroporto.mp4" type="video/mp4">
@@ -934,8 +1239,6 @@ footer {
       </video>
     </div>
     <div class="practice-overlay"></div>
-    <!-- FIM DO VÍDEO DE FUNDO -->
-
     <h3>Problemas com Companhia Aérea?</h3>
     <p>Você passou por alguma dessas situações?</p>
     <div class="problems-grid">
@@ -971,7 +1274,7 @@ footer {
           </svg>
         </div>
         <div class="problem-content">
-          <h4>Bagagem extraviada ou danificada</h4>
+          <h4>Bagagem extraviada</h4>
           <p>Perda, dano ou atraso na entrega.</p>
         </div>
       </div>
@@ -983,8 +1286,8 @@ footer {
           </svg>
         </div>
         <div class="problem-content">
-          <h4>Overbooking / impedimento de embarque</h4>
-          <p>Embarque negado mesmo com passagem confirmada.</p>
+          <h4>Overbooking</h4>
+          <p>Embarque negado com passagem confirmada.</p>
         </div>
       </div>
       <div class="problem-item">
@@ -995,7 +1298,7 @@ footer {
           </svg>
         </div>
         <div class="problem-content">
-          <h4>Mudança de voo inesperada</h4>
+          <h4>Mudança de voo</h4>
           <p>Alteração de horário, rota ou data.</p>
         </div>
       </div>
@@ -1008,7 +1311,7 @@ footer {
         </div>
         <div class="problem-content">
           <h4>Perda de conexão</h4>
-          <p>Atraso que causou prejuízos ou compromissos perdidos.</p>
+          <p>Atraso que causou prejuízos.</p>
         </div>
       </div>
       <div class="problem-item">
@@ -1041,7 +1344,8 @@ footer {
     </div>
   </div>
 </section>
-<!-- Contact Section - FUNDO BRANCO -->
+
+<!-- Contact Section -->
 <section class="contact-section" id="contato">
   <div class="section-title">
     <h2>Entre em Contato</h2>
@@ -1100,33 +1404,48 @@ footer {
   </div>
 </section>
 
-<!-- ========================================== -->
-<!-- FOOTER - NOVO -->
-<!-- ========================================== -->
+<!-- Footer -->
 <footer>
   <div class="footer-content">
     <div class="footer-logo">
       CATELAN <span>&</span> BARBOSA <span>ADVOCACIA</span>
     </div>
     
-    
   </div>
 </footer>
 
 <script>
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   });
+});
+
+// Menu Mobile Toggle
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  const hamburger = document.querySelector('.hamburger-menu');
+  navLinks.classList.toggle('mobile-active');
+  hamburger.classList.toggle('active');
+}
+
+// Fechar menu ao clicar fora
+document.addEventListener('click', function(e) {
+  const navLinks = document.getElementById('navLinks');
+  const hamburger = document.querySelector('.hamburger-menu');
+  if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+    navLinks.classList.remove('mobile-active');
+    hamburger.classList.remove('active');
+  }
+});
 </script>
 </body>
 </html>
