@@ -328,43 +328,35 @@ font-family: 'Montserrat', sans-serif;
 }
 .features-grid {
 display: grid;
-grid-template-columns: repeat(2, 1fr);
+grid-template-columns: repeat(4, 1fr);
 gap: 2rem;
 margin-bottom: 4rem;
 }
 .feature-card {
 background: var(--white);
-padding: 2.5rem;
+padding: 2rem;
 border-radius: 8px;
 transition: transform 0.3s;
 box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 border: 1px solid rgba(0,0,0,0.05);
+text-align: center;
 }
 .feature-card:hover {
 transform: translateY(-5px);
 box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
-.feature-icon {
-width: 50px;
-height: 50px;
-background: var(--primary-dark);
-border-radius: 4px;
-display: flex;
-align-items: center;
-justify-content: center;
-color: var(--white);
-margin-bottom: 1.5rem;
-}
 .feature-card h3 {
 font-family: 'Cormorant Garamond', serif;
-font-size: 1.5rem;
-margin-bottom: 1rem;
+font-size: 1.3rem;
+margin-bottom: 0.8rem;
 font-weight: 600;
+color: var(--primary-dark);
 }
 .feature-card p {
 color: var(--text-gray);
-line-height: 1.7;
+line-height: 1.6;
 font-family: 'Montserrat', sans-serif;
+font-size: 0.9rem;
 }
 .mission-section {
 background: var(--primary-dark);
@@ -435,9 +427,10 @@ font-family: 'Montserrat', sans-serif;
 .team-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-gap: 3rem;
+gap: 2rem;
 max-width: 900px;
 margin: 0 auto;
+align-items: stretch;
 }
 .team-card {
 background: var(--white);
@@ -445,6 +438,9 @@ border-radius: 12px;
 overflow: hidden;
 box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 transition: transform 0.3s;
+display: flex;
+flex-direction: column;
+height: 100%;
 }
 .team-card:hover {
 transform: translateY(-5px);
@@ -452,46 +448,72 @@ box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 .team-photo {
 width: 100%;
-height: 400px;
+height: 300px;
 object-fit: cover;
 background: var(--secondary-dark);
+flex-shrink: 0;
 }
 .team-content {
-padding: 2.5rem;
+padding: 1.8rem;
+flex: 1;
+display: flex;
+flex-direction: column;
 }
 .team-content h3 {
 font-family: 'Cormorant Garamond', serif;
-font-size: 1.8rem;
+font-size: 1.5rem;
 margin-bottom: 0.5rem;
-color: var(--primary-dark);
+color: #0f172a;
 font-weight: 600;
 }
 .team-oab {
-color: var(--accent-gold);
+color: #0f172aea;
 font-weight: 600;
-font-size: 0.9rem;
-margin-bottom: 1.5rem;
+font-size: 0.85rem;
+margin-bottom: 1.2rem;
 display: block;
 font-family: 'Montserrat', sans-serif;
 }
 .team-content p {
 color: var(--text-gray);
 line-height: 1.8;
-margin-bottom: 2rem;
+margin-bottom: 1.5rem;
 font-family: 'Montserrat', sans-serif;
+font-size: 0.9rem;
+flex: 1;
 }
+/* ========================================== */
+/* TEAM LINK - CORES MODIFICADAS */
+/* ========================================== */
 .team-link {
 display: inline-flex;
 align-items: center;
 gap: 0.5rem;
-color: var(--primary-dark);
+color: #d97706;
 text-decoration: none;
 font-weight: 600;
-transition: color 0.3s;
+transition: all 0.3s;
 font-family: 'Montserrat', sans-serif;
+font-size: 0.9rem;
+padding: 0.8rem 1.2rem;
+background: #ffffff;
+border-radius: 6px;
+border: 1px solid  #ffffff;
+white-space: nowrap;
 }
 .team-link:hover {
-color: var(--accent-gold);
+color: #d97706;
+background: #ffffff00;
+border-color: #ffffff00;
+transform: translateX(5px);
+}
+.team-link svg {
+width: 16px;
+height: 16px;
+transition: transform 0.3s;
+}
+.team-link:hover svg {
+transform: translateX(3px);
 }
 /* ========================================== */
 /* BOTÃO WHATSAPP - SEÇÃO EQUIPE (NOVO) */
@@ -597,13 +619,13 @@ align-items: flex-start;
 .problem-icon {
 width: 40px;
 height: 40px;
-background: var(--accent-gold);
+background: #d97706;
 border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-shrink: 0;
-color: var(--white);
+color: #ffffff;
 }
 .problem-content h4 {
 font-size: 1.2rem;
@@ -850,20 +872,24 @@ padding: 4rem 1.5rem;
 .section-title h2 {
 font-size: 2.2rem;
 }
-.features-grid,
-.team-grid,
-.problems-grid,
-.contact-container {
-grid-template-columns: 1fr;
+.features-grid {
+grid-template-columns: repeat(2, 1fr);
 }
 .feature-card {
-padding: 2rem;
+padding: 1.5rem;
+}
+.team-grid {
+grid-template-columns: 1fr;
 }
 .team-photo {
 height: 300px;
 }
 .team-content {
 padding: 2rem;
+}
+.team-link {
+width: 100%;
+justify-content: center;
 }
 .airline-problems {
 padding: 3rem 2rem;
@@ -957,18 +983,17 @@ font-size: 1rem;
 font-size: 1rem;
 margin-bottom: 2rem;
 }
+.features-grid {
+grid-template-columns: 1fr;
+}
 .feature-card {
 padding: 1.5rem;
 }
-.feature-icon {
-width: 40px;
-height: 40px;
-}
 .feature-card h3 {
-font-size: 1.3rem;
+font-size: 1.2rem;
 }
 .feature-card p {
-font-size: 0.9rem;
+font-size: 0.85rem;
 }
 .mission-section {
 padding: 3rem 1.5rem;
@@ -980,19 +1005,24 @@ font-size: 1.6rem;
 font-size: 1rem;
 }
 .team-photo {
-height: 250px;
+height: 220px;
 }
 .team-content {
 padding: 1.5rem;
 }
 .team-content h3 {
-font-size: 1.5rem;
+font-size: 1.4rem;
 }
 .team-oab {
 font-size: 0.8rem;
 }
 .team-content p {
-font-size: 0.9rem;
+font-size: 0.85rem;
+}
+.team-link {
+width: 100%;
+justify-content: center;
+padding: 1rem;
 }
 .airline-problems {
 padding: 2.5rem 1.5rem;
@@ -1155,7 +1185,7 @@ target="_blank">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
 </svg>
-Fale Conosco
+Quero falar com um especialista
 </a>
 </li>
 </ul>
@@ -1180,8 +1210,8 @@ Seu navegador não suporta vídeos HTML5.
 </div>
 <div class="hero-overlay"></div>
 <div class="hero-content">
-<h2>Soluções Jurídicas em Direito Aéreo</h2>
-<p class="hero-description">Especialistas em defesa dos direitos dos passageiros contra companhias aéreas. Protegemos você em casos de voos cancelados, atrasados, overbooking e muito mais.</p>
+<h2>Seu voo atrasou, foi cancelado ou sua bagagem foi extraviada? Você pode ter direito a indenização.</h2>
+<p class="hero-description">Se você passou por isso recentemente, fale com um advogado especialista agora e descubra se pode receber indenização.</p>
 <div class="hero-buttons">
 <a href="https://wa.me/5517991223326?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
 class="btn-whatsapp-large"
@@ -1189,10 +1219,7 @@ target="_blank">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
 </svg>
-Agende uma Consulta
-</a>
-<a href="#servicos" class="btn-secondary-hero">
-Conheça Nossos Serviços
+Quero falar com o advogado.
 </a>
 </div>
 </div>
@@ -1200,56 +1227,50 @@ Conheça Nossos Serviços
 <!-- About Section -->
 <section id="sobre">
 <div class="section-title">
-<h2>Sobre o Catelan e Barbosa Advocacia</h2>
+<h2>Entenda seu problema</h2>
 </div>
 <p class="about-intro">
-Escritório especializado em Direito Aéreo e do Consumidor, com foco principal na defesa dos direitos dos passageiros contra companhias aéreas. Oferecemos assessoria jurídica completa para proteger seus direitos em voos domésticos e internacionais.
+Escritório especializado em Direito Aéreo e do Consumidor, com foco principal na defesa dos direitos dos passageiros contra companhias aéreas.
 </p>
 <div class="features-grid">
+<!-- Primeira linha - 4 cards -->
 <div class="feature-card">
-<div class="feature-icon">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-</svg>
-</div>
-<h3>Especialização Comprovada</h3>
-<p>Expertise reconhecida em ações contra companhias aéreas por cancelamentos, atrasos, extravio de bagagem e overbooking.</p>
+<h3>Voo atrasado ou cancelado</h3>
+<p>Sem aviso prévio ou com grande atraso.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-<line x1="9" y1="9" x2="15" y2="9"></line>
-<line x1="9" y1="15" x2="15" y2="15"></line>
-</svg>
-</div>
-<h3>Foco no Passageiro</h3>
-<p>Soluções estratégicas para passageiros que enfrentam problemas com companhias aéreas nacionais e internacionais.</p>
+<h3>Bagagem extraviada</h3>
+<p>Perda, dano ou atraso na entrega.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<circle cx="12" cy="8" r="7"></circle>
-<polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-</svg>
-</div>
-<h3>Resultados Consistentes</h3>
-<p>Histórico comprovado de sucesso em indenizações contra companhias aéreas com atendimento personalizado.</p>
+<h3>Mudança de voo</h3>
+<p>Alteração de horário, rota ou data.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<circle cx="12" cy="12" r="10"></circle>
-<circle cx="12" cy="12" r="3"></circle>
-</svg>
+<h3>Falta de assistência</h3>
+<p>Sem alimentação, hotel ou comunicação.</p>
 </div>
-<h3>Abordagem Personalizada</h3>
-<p>Cada caso é único. Desenvolvemos estratégias customizadas para suas necessidades específicas.</p>
+<!-- Segunda linha - 4 cards -->
+<div class="feature-card">
+<h3>Reembolso não pago</h3>
+<p>Valor não devolvido após cancelamento.</p>
+</div>
+<div class="feature-card">
+<h3>Overbooking</h3>
+<p>Embarque negado com passagem confirmada.</p>
+</div>
+<div class="feature-card">
+<h3>Perda de conexão</h3>
+<p>Atraso que causou prejuízos.</p>
+</div>
+<div class="feature-card">
+<h3>Cobranças indevidas</h3>
+<p>Taxas abusivas ou valores não informados.</p>
 </div>
 </div>
 <div class="mission-section">
-<h3>Nossa Missão</h3>
-<p>Proporcionar soluções jurídicas eficazes e estratégicas, protegendo os direitos dos passageiros em questões relacionadas a companhias aéreas com excelência, ética e comprometimento.</p>
+<h3>Se você passou por qualquer uma dessas situações, você pode ter direito a indenização.</h3>
+<p></p>
 </div>
 <!-- ========================================== -->
 <!-- BOTÃO WHATSAPP ADICIONADO - SEÇÃO SOBRE -->
@@ -1261,7 +1282,7 @@ target="_blank">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
 </svg>
-Fale Conosco Sobre Nosso Trabalho
+Quero receber minha indenização.
 </a>
 </div>
 </section>
@@ -1276,21 +1297,29 @@ Fale Conosco Sobre Nosso Trabalho
 <img src="helena.jpeg" alt="Dra. Helena Catelan" class="team-photo">
 <div class="team-content">
 <h3>Dra. Helena Catelan</h3>
-<span class="team-oab">Dra. Helena Catelan Soares de Carvalho – OAB/SP 454.821</span>
+<span class="team-oab">OAB/SP 454.821</span>
 <p>Atuação especializada em Direito do Consumidor e Direito de Família, com atendimento ético, claro e personalizado. Defesa dos seus direitos em problemas com empresas, companhias aéreas, cobranças indevidas e reembolsos, além de divórcio, guarda, pensão alimentícia e inventário.</p>
 <a href="#contato" class="team-link">
-Conheça o trabalho da Dra. Helena →
+Conheça o trabalho da Dra. Helena
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<line x1="5" y1="12" x2="19" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
 </a>
 </div>
 </div>
 <div class="team-card">
 <img src="mariana.jpeg" alt="Dra. Mariana Barbosa Leite" class="team-photo">
 <div class="team-content">
-<h3>Dra. Mariana Barbosa Leite</h3>
-<span class="team-oab">Dra. Mariana Barbosa Leite – OAB/SP 491.921</span>
+<h3>Dra. Mariana Leite</h3>
+<span class="team-oab">OAB/SP 491.921</span>
 <p>Advogada especializada em Direito do Consumidor e Direito Bancário, pós-graduada em Direito Civil. Atua há mais de 4 anos na defesa dos consumidores, com foco no combate a práticas abusivas de instituições financeiras e grandes empresas.</p>
 <a href="#contato" class="team-link">
-Conheça o trabalho da Dra. Mariana →
+Conheça o trabalho da Dra. Mariana
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<line x1="5" y1="12" x2="19" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
 </a>
 </div>
 </div>
@@ -1305,7 +1334,7 @@ target="_blank">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
 </svg>
-Fale com Nossas Advogadas
+Falar com um especialista
 </a>
 </div>
 </section>
@@ -1322,103 +1351,89 @@ Seu navegador não suporta vídeos HTML5.
 </video>
 </div>
 <div class="practice-overlay"></div>
-<h3>Problemas com Companhia Aérea?</h3>
-<p>Você passou por alguma dessas situações?</p>
+<h3>Principais dúvidas</h3>
+<p></p>
 <div class="problems-grid">
 <div class="problem-item">
 <div class="problem-icon">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <circle cx="12" cy="12" r="10"></circle>
-<polyline points="12 6 12 12 16 14"></polyline>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<line x1="12" y1="17" x2="12.01" y2="17"></line>
 </svg>
 </div>
 <div class="problem-content">
-<h4>Voo atrasado ou cancelado</h4>
-<p>Sem aviso prévio ou com grande atraso.</p>
+<h4>Quanto posso receber de indenização por voo atrasado ou cancelado?</h4>
+<p>O valor depende da situação, mas a Justiça costuma fixar indenizações entre R$ 3.000 e R$ 10.000.
+Cada caso precisa ser analisado para verificar o valor possível.</p>
 </div>
 </div>
 <div class="problem-item">
 <div class="problem-icon">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <circle cx="12" cy="12" r="10"></circle>
-<polyline points="12 6 12 12 16 14"></polyline>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<line x1="12" y1="17" x2="12.01" y2="17"></line>
 </svg>
 </div>
 <div class="problem-content">
-<h4>Reembolso não pago</h4>
-<p>Valor não devolvido após cancelamento.</p>
+<h4>O processo é demorado?</h4>
+<p>Muitos casos são resolvidos em alguns meses, principalmente no Juizado Especial.
+A duração depende das provas e da complexidade do caso.</p>
 </div>
 </div>
 <div class="problem-item">
 <div class="problem-icon">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <circle cx="12" cy="12" r="10"></circle>
-<polyline points="12 6 12 12 16 14"></polyline>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<line x1="12" y1="17" x2="12.01" y2="17"></line>
 </svg>
 </div>
 <div class="problem-content">
-<h4>Bagagem extraviada</h4>
-<p>Perda, dano ou atraso na entrega.</p>
+<h4>Posso contratar qualquer advogado para esse tipo de processo?</h4>
+<p>O ideal é procurar um advogado especializado em direito do consumidor e passageiro aéreo.
+Isso aumenta as chances de conduzir o caso da forma correta.</p>
 </div>
 </div>
 <div class="problem-item">
 <div class="problem-icon">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <circle cx="12" cy="12" r="10"></circle>
-<polyline points="12 6 12 12 16 14"></polyline>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<line x1="12" y1="17" x2="12.01" y2="17"></line>
 </svg>
 </div>
 <div class="problem-content">
-<h4>Overbooking</h4>
-<p>Embarque negado com passagem confirmada.</p>
+<h4>Tem custo para entrar com o processo?</h4>
+<p>Depende do caso. Em muitas situações não há custos iniciais, e os honorários podem ser pagos apenas em caso de êxito.</p>
 </div>
 </div>
 <div class="problem-item">
 <div class="problem-icon">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <circle cx="12" cy="12" r="10"></circle>
-<polyline points="12 6 12 12 16 14"></polyline>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<line x1="12" y1="17" x2="12.01" y2="17"></line>
 </svg>
 </div>
 <div class="problem-content">
-<h4>Mudança de voo</h4>
-<p>Alteração de horário, rota ou data.</p>
+<h4>Vale a pena entrar com processo contra companhia aérea?</h4>
+<p>Quando há atraso excessivo, cancelamento ou bagagem extraviada, é comum existir direito à indenização.
+Um advogado pode analisar o caso e orientar sobre as chances.</p>
 </div>
 </div>
 <div class="problem-item">
 <div class="problem-icon">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <circle cx="12" cy="12" r="10"></circle>
-<polyline points="12 6 12 12 16 14"></polyline>
+<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+<line x1="12" y1="17" x2="12.01" y2="17"></line>
 </svg>
 </div>
 <div class="problem-content">
-<h4>Perda de conexão</h4>
-<p>Atraso que causou prejuízos.</p>
-</div>
-</div>
-<div class="problem-item">
-<div class="problem-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<circle cx="12" cy="12" r="10"></circle>
-<polyline points="12 6 12 12 16 14"></polyline>
-</svg>
-</div>
-<div class="problem-content">
-<h4>Falta de assistência</h4>
-<p>Sem alimentação, hotel ou comunicação.</p>
-</div>
-</div>
-<div class="problem-item">
-<div class="problem-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<circle cx="12" cy="12" r="10"></circle>
-<polyline points="12 6 12 12 16 14"></polyline>
-</svg>
-</div>
-<div class="problem-content">
-<h4>Cobranças indevidas</h4>
-<p>Taxas abusivas ou valores não informados.</p>
+<h4>Meu voo atrasou, mas a companhia disse que isso é normal. Ainda posso pedir indenização?</h4>
+<p>Nem todo atraso é considerado normal pela Justiça. Se houve transtornos ou prejuízos, pode existir direito à indenização.</p>
 </div>
 </div>
 </div>
@@ -1443,8 +1458,8 @@ Preciso de Ajuda com Meu Caso
 <!-- Contact Section -->
 <section class="contact-section" id="contato">
 <div class="section-title">
-<h2>Entre em Contato</h2>
-<p>Agende uma consulta e descubra como podemos ajudar a resolver sua situação.</p>
+<h2>Entre em contato</h2>
+<p>Agende uma consulta sem custo e resolva seu caso.</p>
 </div>
 <div class="contact-container">
 <div class="contact-cta">
@@ -1456,7 +1471,7 @@ target="_blank">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
 </svg>
-Fale Conosco Agora
+Quero resolver meu problema
 </a>
 </div>
 <div class="contact-info-box">
@@ -1468,7 +1483,7 @@ Fale Conosco Agora
 </div>
 <div class="contact-info-details">
 <h4>Telefone / WhatsApp</h4>
-<p><strong>(17) 99122-3326</strong><br>Atendimento imediato</p>
+<p><strong>(17) 98102-2880</strong><br></p>
 </div>
 </div>
 <div class="contact-info-item">
@@ -1480,7 +1495,7 @@ Fale Conosco Agora
 </div>
 <div class="contact-info-details">
 <h4>E-mail</h4>
-<p><strong>juridico@catelanebarbosa.adv.br</strong><br>Respondemos em até 24h</p>
+<p><strong>catelanebarbosaadvocacia@gmail.com</strong><br></p>
 </div>
 </div>
 <div class="contact-info-item">
