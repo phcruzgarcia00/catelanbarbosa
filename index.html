@@ -445,7 +445,7 @@ box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 .team-photo {
 width: 100%;
-height: 450px;
+height: 350px;
 object-fit: cover;
 object-position: center top;
 background: var(--secondary-dark);
@@ -836,7 +836,7 @@ text-decoration: none;
 }
 
 /* ========================================== */
-/* RESPONSIVIDADE - IMAGENS DA EQUIPE */
+/* RESPONSIVIDADE - CONTATO MOBILE */
 /* ========================================== */
 @media (max-width: 968px) {
 .hero {
@@ -874,13 +874,9 @@ padding: 1.5rem;
 }
 .team-grid {
 grid-template-columns: 1fr;
-max-width: 500px;
-margin: 0 auto;
 }
 .team-photo {
-height: 400px;
-object-fit: cover;
-object-position: center 15%;
+height: 300px;
 }
 .team-content {
 padding: 2rem;
@@ -896,10 +892,44 @@ padding: 3rem 2rem;
 font-size: 2rem;
 }
 .contact-container {
-gap: 2rem;
+grid-template-columns: 1fr;
+gap: 3rem;
 }
 .contact-cta h3 {
 font-size: 2rem;
+text-align: center;
+}
+.contact-cta p {
+text-align: center;
+font-size: 1rem;
+}
+.btn-whatsapp-cta {
+width: 100%;
+max-width: 400px;
+justify-content: center;
+margin: 0 auto;
+display: flex;
+}
+.contact-info-box {
+padding: 2rem;
+}
+.contact-info-item {
+gap: 1rem;
+padding: 1.2rem 0;
+}
+.contact-info-icon {
+width: 40px;
+height: 40px;
+}
+.contact-info-icon svg {
+width: 20px;
+height: 20px;
+}
+.contact-info-details h4 {
+font-size: 0.85rem;
+}
+.contact-info-details p {
+font-size: 0.9rem;
 }
 .nav-links {
 display: none;
@@ -1003,14 +1033,8 @@ font-size: 1.6rem;
 .mission-section p {
 font-size: 1rem;
 }
-.team-grid {
-max-width: 100%;
-padding: 0 0.5rem;
-}
 .team-photo {
-height: 350px;
-object-fit: cover;
-object-position: center 20%;
+height: 250px;
 }
 .team-content {
 padding: 1.5rem;
@@ -1065,35 +1089,54 @@ padding: 1.5rem;
 .rights-info p {
 font-size: 1rem;
 }
+.contact-section {
+padding: 3rem 1rem;
+}
+.contact-container {
+gap: 2.5rem;
+}
 .contact-cta h3 {
 font-size: 1.6rem;
+line-height: 1.3;
 }
 .contact-cta p {
-font-size: 1rem;
+font-size: 0.95rem;
 margin-bottom: 2rem;
 }
 .btn-whatsapp-cta {
-padding: 1rem 2rem;
-font-size: 1rem;
-width: 100%;
-justify-content: center;
+padding: 1rem 1.5rem;
+font-size: 0.95rem;
 }
-.contact-info-box {
-padding: 2rem 1.5rem;
-}
-.contact-info-icon {
-width: 40px;
-height: 40px;
-}
-.contact-info-icon svg {
+.btn-whatsapp-cta svg {
 width: 20px;
 height: 20px;
 }
+.contact-info-box {
+padding: 1.5rem;
+border-radius: 8px;
+}
+.contact-info-item {
+gap: 0.8rem;
+padding: 1rem 0;
+flex-direction: row;
+align-items: flex-start;
+}
+.contact-info-icon {
+width: 36px;
+height: 36px;
+border-radius: 4px;
+}
+.contact-info-icon svg {
+width: 18px;
+height: 18px;
+}
 .contact-info-details h4 {
-font-size: 0.85rem;
+font-size: 0.8rem;
+margin-bottom: 0.2rem;
 }
 .contact-info-details p {
-font-size: 0.9rem;
+font-size: 0.85rem;
+line-height: 1.4;
 }
 .footer {
 padding: 2rem 1rem;
@@ -1158,9 +1201,27 @@ display: none;
 .logo-line {
 display: none;
 }
-.team-photo {
-height: 300px;
-object-position: center 25%;
+.contact-cta h3 {
+font-size: 1.4rem;
+}
+.contact-cta p {
+font-size: 0.9rem;
+}
+.btn-whatsapp-cta {
+padding: 0.9rem 1.2rem;
+font-size: 0.9rem;
+}
+.contact-info-box {
+padding: 1.2rem;
+}
+.contact-info-item {
+padding: 0.8rem 0;
+}
+.contact-info-details h4 {
+font-size: 0.75rem;
+}
+.contact-info-details p {
+font-size: 0.8rem;
 }
 }
 </style>
@@ -1216,7 +1277,7 @@ Seu navegador não suporta vídeos HTML5.
 </div>
 <div class="hero-overlay"></div>
 <div class="hero-content">
-<h2>Seu voo atrasou, foi cancelado ou sua bagagem foi extraviada? Você pode ter direito à indenização.</h2>
+<h2>Seu voo atrasou, foi cancelado ou sua bagagem foi extraviada? Você pode ter direito a indenização.</h2>
 <p class="hero-description">Se você passou por isso recentemente, fale com um advogado especialista agora e descubra se pode receber indenização.</p>
 <div class="hero-buttons">
 <a href="https://wa.me/5517981022880?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
