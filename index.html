@@ -7,1444 +7,1534 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 :root {
-  --primary-dark: #0f172a;
-  --secondary-dark: #1e293b;
-  --accent-gold: #d97706;
-  --text-gray: #64748b;
-  --light-bg: #f8fafc;
-  --white: #ffffff;
-  
-  /* ========================================== */
-  /* CONTROLES DA LOGO - AJUSTE AQUI */
-  /* ========================================== */
-  --logo-size: 80px;
-  --logo-margin-bottom: 0.5rem;
-  --logo-offset-x: 0px;
-  --logo-offset-y: 0px;
+--primary-dark: #0f172a;
+--secondary-dark: #1e293b;
+--accent-gold: #d97706;
+--text-gray: #64748b;
+--light-bg: #f8fafc;
+--white: #ffffff;
+--logo-size: 80px;
+--logo-margin-bottom: 0.5rem;
+--logo-offset-x: 0px;
+--logo-offset-y: 0px;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--primary-dark);
-  line-height: 1.6;
-  overflow-x: hidden;
+font-family: 'Montserrat', sans-serif;
+color: var(--primary-dark);
+line-height: 1.6;
+overflow-x: hidden;
 }
 h1, h2, h3, h4 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
+font-family: 'Cormorant Garamond', serif;
+font-weight: 600;
 }
-/* Header com Logo CB */
 header {
-  background: var(--white);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-  position: absolute;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+background: var(--white);
+box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+position: absolute;
+width: 100%;
+top: 0;
+z-index: 1000;
 }
 nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 .logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 .logo-cb {
-  width: var(--logo-size);
-  height: var(--logo-size);
-  margin-bottom: var(--logo-margin-bottom);
-  object-fit: contain;
-  transform: translate(var(--logo-offset-x), var(--logo-offset-y));
+width: var(--logo-size);
+height: var(--logo-size);
+margin-bottom: var(--logo-margin-bottom);
+object-fit: contain;
+transform: translate(var(--logo-offset-x), var(--logo-offset-y));
 }
 .logo-text {
-  text-align: center;
+text-align: center;
 }
 .logo-main {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: 3px;
-  color: var(--primary-dark);
-  margin: 0;
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.8rem;
+font-weight: 600;
+letter-spacing: 3px;
+color: var(--primary-dark);
+margin: 0;
 }
 .logo-sub {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 8px;
-  color: var(--text-gray);
-  font-weight: 500;
-  margin-top: -5px;
+font-family: 'Montserrat', sans-serif;
+font-size: 0.75rem;
+letter-spacing: 8px;
+color: var(--text-gray);
+font-weight: 500;
+margin-top: -5px;
 }
 .logo-line {
-  width: 120px;
-  height: 1px;
-  background: var(--primary-dark);
-  margin: 5px auto;
+width: 120px;
+height: 1px;
+background: var(--primary-dark);
+margin: 5px auto;
 }
 .nav-links {
-  display: flex;
-  gap: 2.5rem;
-  align-items: center;
-  list-style: none;
+display: flex;
+gap: 2.5rem;
+align-items: center;
+list-style: none;
 }
 .nav-links a {
-  text-decoration: none;
-  color: var(--primary-dark);
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: color 0.3s;
-  font-family: 'Montserrat', sans-serif;
+text-decoration: none;
+color: var(--primary-dark);
+font-weight: 500;
+font-size: 0.9rem;
+transition: color 0.3s;
+font-family: 'Montserrat', sans-serif;
 }
 .nav-links a:hover {
-  color: var(--accent-gold);
+color: var(--accent-gold);
 }
 .btn-whatsapp {
-  background: #25D366;
-  color: var(--white);
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
+background: #25D366;
+color: var(--white);
+padding: 1rem 2rem;
+border: none;
+border-radius: 4px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+font-family: 'Montserrat', sans-serif;
+font-size: 0.9rem;
 }
 .btn-whatsapp:hover {
-  background: #128C7E;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+background: #128C7E;
+transform: translateY(-2px);
+box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
 }
-/* Menu Hambúrguer Mobile */
 .hamburger-menu {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 5px;
-  z-index: 1001;
+display: none;
+flex-direction: column;
+gap: 5px;
+cursor: pointer;
+padding: 5px;
+z-index: 1001;
 }
 .hamburger-menu span {
-  width: 25px;
-  height: 3px;
-  background: var(--primary-dark);
-  border-radius: 2px;
-  transition: all 0.3s;
+width: 25px;
+height: 3px;
+background: var(--primary-dark);
+border-radius: 2px;
+transition: all 0.3s;
 }
 .hamburger-menu.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+transform: rotate(45deg) translate(5px, 5px);
 }
 .hamburger-menu.active span:nth-child(2) {
-  opacity: 0;
+opacity: 0;
 }
 .hamburger-menu.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px);
+transform: rotate(-45deg) translate(7px, -6px);
 }
-/* Ícone de Avião Flutuante WhatsApp */
 .whatsapp-airplane {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 70px;
-  height: 70px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 999;
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s;
-  animation: airplaneFloat 3s ease-in-out infinite;
+position: fixed;
+bottom: 30px;
+right: 30px;
+width: 70px;
+height: 70px;
+background: #25D366;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+z-index: 999;
+box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+transition: all 0.3s;
+animation: airplaneFloat 3s ease-in-out infinite;
 }
 .whatsapp-airplane:hover {
-  transform: scale(1.1);
-  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+transform: scale(1.1);
+box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
 }
 .whatsapp-airplane svg {
-  width: 35px;
-  height: 35px;
-  fill: white;
+width: 35px;
+height: 35px;
+fill: white;
 }
 @keyframes airplaneFloat {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
 }
-/* Hero Section - COM VÍDEO DE FUNDO E TEXTO CENTRALIZADO */
 .hero {
-  position: relative;
-  margin-top: 120px;
-  padding: 8rem 2rem;
-  min-height: 700px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+position: relative;
+margin-top: 120px;
+padding: 8rem 2rem;
+min-height: 700px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
 }
 .hero-video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -2;
 }
 .hero-video-background video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(15, 23, 42, 0.75);
-  z-index: -1;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(15, 23, 42, 0.75);
+z-index: -1;
 }
 .hero-content {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+text-align: center;
+max-width: 900px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
 }
 .hero h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4rem;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  color: var(--white);
-  font-weight: 600;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+font-family: 'Cormorant Garamond', serif;
+font-size: 4rem;
+line-height: 1.1;
+margin-bottom: 1.5rem;
+color: var(--white);
+font-weight: 600;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 .hero-description {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 3rem;
-  line-height: 1.8;
-  font-weight: 400;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.25rem;
+color: rgba(255, 255, 255, 0.9);
+margin-bottom: 3rem;
+line-height: 1.8;
+font-weight: 400;
 }
 .hero-buttons {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
+display: flex;
+gap: 1.5rem;
+justify-content: center;
+flex-wrap: wrap;
 }
 .btn-whatsapp-large {
-  background: #25D366;
-  color: var(--white);
-  padding: 1.3rem 3rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.05rem;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+background: #25D366;
+color: var(--white);
+padding: 1.3rem 3rem;
+border: none;
+border-radius: 4px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 0.8rem;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.05rem;
+box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 .btn-whatsapp-large:hover {
-  background: #128C7E;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+background: #128C7E;
+transform: translateY(-3px);
+box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 .btn-secondary-hero {
-  background: transparent;
-  color: var(--white);
-  padding: 1.3rem 3rem;
-  border: 2px solid var(--white);
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.05rem;
+background: transparent;
+color: var(--white);
+padding: 1.3rem 3rem;
+border: 2px solid var(--white);
+border-radius: 4px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 0.8rem;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.05rem;
 }
 .btn-secondary-hero:hover {
-  background: var(--white);
-  color: var(--primary-dark);
-  transform: translateY(-3px);
+background: var(--white);
+color: var(--primary-dark);
+transform: translateY(-3px);
 }
-/* Sections General */
 section {
-  padding: 5rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+padding: 5rem 2rem;
+max-width: 1200px;
+margin: 0 auto;
 }
 .section-title {
-  text-align: center;
-  margin-bottom: 3rem;
+text-align: center;
+margin-bottom: 3rem;
 }
 .section-title h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  position: relative;
-  display: inline-block;
-  font-weight: 600;
+font-family: 'Cormorant Garamond', serif;
+font-size: 2.8rem;
+margin-bottom: 1rem;
+position: relative;
+display: inline-block;
+font-weight: 600;
 }
 .section-title h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--primary-dark);
+content: '';
+position: absolute;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+width: 60px;
+height: 3px;
+background: var(--primary-dark);
 }
 .section-title p {
-  color: var(--text-gray);
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 2rem auto 0;
-  font-family: 'Montserrat', sans-serif;
+color: var(--text-gray);
+font-size: 1.1rem;
+max-width: 800px;
+margin: 2rem auto 0;
+font-family: 'Montserrat', sans-serif;
 }
-/* About Section - CARDS BRANCOS */
 .about-intro {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 4rem;
-  font-size: 1.1rem;
-  color: var(--text-gray);
-  line-height: 1.8;
-  font-family: 'Montserrat', sans-serif;
+text-align: center;
+max-width: 900px;
+margin: 0 auto 4rem;
+font-size: 1.1rem;
+color: var(--text-gray);
+line-height: 1.8;
+font-family: 'Montserrat', sans-serif;
 }
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-bottom: 4rem;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 2rem;
+margin-bottom: 4rem;
 }
 .feature-card {
-  background: var(--white);
-  padding: 2.5rem;
-  border-radius: 8px;
-  transition: transform 0.3s;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,0,0,0.05);
+background: var(--white);
+padding: 2.5rem;
+border-radius: 8px;
+transition: transform 0.3s;
+box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+border: 1px solid rgba(0,0,0,0.05);
 }
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+transform: translateY(-5px);
+box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 .feature-icon {
-  width: 50px;
-  height: 50px;
-  background: var(--primary-dark);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  margin-bottom: 1.5rem;
+width: 50px;
+height: 50px;
+background: var(--primary-dark);
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--white);
+margin-bottom: 1.5rem;
 }
 .feature-card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.5rem;
+margin-bottom: 1rem;
+font-weight: 600;
 }
 .feature-card p {
-  color: var(--text-gray);
-  line-height: 1.7;
-  font-family: 'Montserrat', sans-serif;
+color: var(--text-gray);
+line-height: 1.7;
+font-family: 'Montserrat', sans-serif;
 }
 .mission-section {
-  background: var(--primary-dark);
-  color: var(--white);
-  padding: 4rem 3rem;
-  border-radius: 8px;
-  text-align: center;
+background: var(--primary-dark);
+color: var(--white);
+padding: 4rem 3rem;
+border-radius: 8px;
+text-align: center;
 }
 .mission-section h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+font-family: 'Cormorant Garamond', serif;
+font-size: 2rem;
+margin-bottom: 1.5rem;
+font-weight: 600;
 }
 .mission-section p {
-  max-width: 900px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  opacity: 0.9;
-  font-family: 'Montserrat', sans-serif;
+max-width: 900px;
+margin: 0 auto;
+font-size: 1.1rem;
+line-height: 1.8;
+opacity: 0.9;
+font-family: 'Montserrat', sans-serif;
 }
-/* Team Section */
+/* ========================================== */
+/* BOTÃO WHATSAPP - SEÇÃO SOBRE (NOVO) */
+/* ========================================== */
+.about-cta-container {
+text-align: center;
+margin-top: 3rem;
+}
+.btn-whatsapp-about {
+background: #25D366;
+color: var(--white);
+padding: 1.2rem 2.5rem;
+border: none;
+border-radius: 4px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 0.7rem;
+font-family: 'Montserrat', sans-serif;
+font-size: 1rem;
+box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+.btn-whatsapp-about:hover {
+background: #128C7E;
+transform: translateY(-3px);
+box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
 .team-section {
-  background: #0F172A;
-  max-width: 100%;
-  padding: 5rem 2rem;
+background: #0F172A;
+max-width: 100%;
+padding: 5rem 2rem;
 }
 .team-section .section-title h2 {
-  color: var(--white);
-  font-family: 'Cormorant Garamond', serif;
+color: var(--white);
+font-family: 'Cormorant Garamond', serif;
 }
 .team-section .section-title h2::after {
-  background: var(--white);
+background: var(--white);
 }
 .team-section .section-title p {
-  color: rgba(255, 255, 255, 0.8);
-  font-family: 'Montserrat', sans-serif;
+color: rgba(255, 255, 255, 0.8);
+font-family: 'Montserrat', sans-serif;
 }
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  max-width: 900px;
-  margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 3rem;
+max-width: 900px;
+margin: 0 auto;
 }
 .team-card {
-  background: var(--white);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
+background: var(--white);
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+transition: transform 0.3s;
 }
 .team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+transform: translateY(-5px);
+box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 .team-photo {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  background: var(--secondary-dark);
+width: 100%;
+height: 400px;
+object-fit: cover;
+background: var(--secondary-dark);
 }
 .team-content {
-  padding: 2.5rem;
+padding: 2.5rem;
 }
 .team-content h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: var(--primary-dark);
-  font-weight: 600;
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.8rem;
+margin-bottom: 0.5rem;
+color: var(--primary-dark);
+font-weight: 600;
 }
 .team-oab {
-  color: var(--accent-gold);
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  display: block;
-  font-family: 'Montserrat', sans-serif;
+color: var(--accent-gold);
+font-weight: 600;
+font-size: 0.9rem;
+margin-bottom: 1.5rem;
+display: block;
+font-family: 'Montserrat', sans-serif;
 }
 .team-content p {
-  color: var(--text-gray);
-  line-height: 1.8;
-  margin-bottom: 2rem;
-  font-family: 'Montserrat', sans-serif;
+color: var(--text-gray);
+line-height: 1.8;
+margin-bottom: 2rem;
+font-family: 'Montserrat', sans-serif;
 }
 .team-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--primary-dark);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-  font-family: 'Montserrat', sans-serif;
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+color: var(--primary-dark);
+text-decoration: none;
+font-weight: 600;
+transition: color 0.3s;
+font-family: 'Montserrat', sans-serif;
 }
 .team-link:hover {
-  color: var(--accent-gold);
+color: var(--accent-gold);
 }
-/* Practice Areas - Airline Problems */
+/* ========================================== */
+/* BOTÃO WHATSAPP - SEÇÃO EQUIPE (NOVO) */
+/* ========================================== */
+.team-cta-container {
+text-align: center;
+margin-top: 3rem;
+}
+.btn-whatsapp-team {
+background: #25D366;
+color: var(--white);
+padding: 1.2rem 2.5rem;
+border: none;
+border-radius: 4px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 0.7rem;
+font-family: 'Montserrat', sans-serif;
+font-size: 1rem;
+box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+.btn-whatsapp-team:hover {
+background: #128C7E;
+transform: translateY(-3px);
+box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
 .practice-areas {
-  background: var(--white);
-  max-width: 100%;
+background: var(--white);
+max-width: 100%;
 }
 .practice-areas > .section-title {
-  max-width: 1200px;
-  margin: 0 auto 3rem;
+max-width: 1200px;
+margin: 0 auto 3rem;
 }
 .airline-problems {
-  background: var(--primary-dark);
-  color: var(--white);
-  padding: 4rem 3rem;
-  border-radius: 12px;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
+background: var(--primary-dark);
+color: var(--white);
+padding: 4rem 3rem;
+border-radius: 12px;
+max-width: 1200px;
+margin: 0 auto;
+position: relative;
+overflow: hidden;
 }
 .practice-video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 0;
 }
 .practice-video-background video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 .practice-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(15, 23, 42, 0.85);
-  z-index: 1;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(15, 23, 42, 0.85);
+z-index: 1;
 }
 .airline-problems h3,
 .airline-problems > p,
 .problems-grid,
 .rights-info {
-  position: relative;
-  z-index: 2;
+position: relative;
+z-index: 2;
 }
 .airline-problems h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  font-weight: 600;
+font-family: 'Cormorant Garamond', serif;
+font-size: 2.5rem;
+margin-bottom: 1rem;
+text-align: center;
+font-weight: 600;
 }
 .airline-problems > p {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
-  opacity: 0.9;
-  font-family: 'Montserrat', sans-serif;
+text-align: center;
+font-size: 1.2rem;
+margin-bottom: 3rem;
+opacity: 0.9;
+font-family: 'Montserrat', sans-serif;
 }
 .problems-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-bottom: 3rem;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 2rem;
+margin-bottom: 3rem;
 }
 .problem-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+display: flex;
+gap: 1rem;
+align-items: flex-start;
 }
 .problem-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--accent-gold);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: var(--white);
+width: 40px;
+height: 40px;
+background: var(--accent-gold);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+color: var(--white);
 }
 .problem-content h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
 }
 .problem-content p {
-  opacity: 0.85;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  font-family: 'Montserrat', sans-serif;
+opacity: 0.85;
+line-height: 1.6;
+font-size: 0.95rem;
+font-family: 'Montserrat', sans-serif;
 }
 .rights-info {
-  background: rgba(255,255,255,0.05);
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
+background: rgba(255,255,255,0.05);
+padding: 2rem;
+border-radius: 8px;
+text-align: center;
 }
 .rights-info p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  opacity: 0.9;
-  font-family: 'Montserrat', sans-serif;
+font-size: 1.1rem;
+line-height: 1.8;
+opacity: 0.9;
+font-family: 'Montserrat', sans-serif;
 }
-/* Contact Section - FUNDO BRANCO */
+/* ========================================== */
+/* BOTÃO WHATSAPP - SEÇÃO SERVIÇOS (NOVO) */
+/* ========================================== */
+.services-cta-container {
+text-align: center;
+margin-top: 2.5rem;
+}
+.btn-whatsapp-services {
+background: #25D366;
+color: var(--white);
+padding: 1.2rem 2.5rem;
+border: none;
+border-radius: 4px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 0.7rem;
+font-family: 'Montserrat', sans-serif;
+font-size: 1rem;
+box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+.btn-whatsapp-services:hover {
+background: #128C7E;
+transform: translateY(-3px);
+box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
 .contact-section {
-  background: var(--white);
-  padding: 6rem 2rem;
-  max-width: 100%;
+background: var(--white);
+padding: 6rem 2rem;
+max-width: 100%;
 }
 .contact-section .section-title h2 {
-  color: var(--primary-dark);
+color: var(--primary-dark);
 }
 .contact-section .section-title h2::after {
-  background: var(--primary-dark);
+background: var(--primary-dark);
 }
 .contact-section .section-title p {
-  color: var(--text-gray);
+color: var(--text-gray);
 }
 .contact-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+max-width: 1000px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+align-items: center;
 }
 .contact-cta h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--primary-dark);
+font-family: 'Cormorant Garamond', serif;
+font-size: 2.5rem;
+margin-bottom: 1.5rem;
+font-weight: 600;
+line-height: 1.2;
+color: var(--primary-dark);
 }
 .contact-cta p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 2.5rem;
-  color: var(--text-gray);
+font-family: 'Montserrat', sans-serif;
+font-size: 1.1rem;
+line-height: 1.8;
+margin-bottom: 2.5rem;
+color: var(--text-gray);
 }
 .btn-whatsapp-cta {
-  background: #25D366;
-  color: var(--white);
-  padding: 1.3rem 2.5rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+background: #25D366;
+color: var(--white);
+padding: 1.3rem 2.5rem;
+border: none;
+border-radius: 4px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 0.8rem;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.1rem;
+box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
 }
 .btn-whatsapp-cta:hover {
-  background: #128C7E;
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+background: #128C7E;
+transform: translateY(-3px);
+box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
 }
 .contact-info-box {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 2.5rem;
-  color: var(--primary-dark);
-  border: 2px solid rgba(15, 23, 42, 0.1);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+background: var(--white);
+border-radius: 12px;
+padding: 2.5rem;
+color: var(--primary-dark);
+border: 2px solid rgba(15, 23, 42, 0.1);
+box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 .contact-info-item {
-  display: flex;
-  gap: 1.2rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  align-items: flex-start;
+display: flex;
+gap: 1.2rem;
+padding: 1.5rem 0;
+border-bottom: 1px solid rgba(0,0,0,0.05);
+align-items: flex-start;
 }
 .contact-info-item:last-child {
-  border-bottom: none;
+border-bottom: none;
 }
 .contact-info-icon {
-  width: 45px;
-  height: 45px;
-  background: var(--primary-dark);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  flex-shrink: 0;
+width: 45px;
+height: 45px;
+background: var(--primary-dark);
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--white);
+flex-shrink: 0;
 }
 .contact-info-details h4 {
-  font-size: 0.95rem;
-  margin-bottom: 0.3rem;
-  color: var(--primary-dark);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+font-size: 0.95rem;
+margin-bottom: 0.3rem;
+color: var(--primary-dark);
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
 }
 .contact-info-details p {
-  color: var(--text-gray);
-  line-height: 1.5;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+color: var(--text-gray);
+line-height: 1.5;
+font-family: 'Montserrat', sans-serif;
+font-size: 1rem;
 }
 .contact-info-details strong {
-  color: var(--primary-dark);
-  font-weight: 600;
+color: var(--primary-dark);
+font-weight: 600;
 }
-/* ========================================== */
-/* FOOTER */
-/* ========================================== */
 footer {
-  background: var(--primary-dark);
-  color: var(--white);
-  padding: 3rem 2rem;
-  max-width: 100%;
+background: var(--primary-dark);
+color: var(--white);
+padding: 3rem 2rem;
+max-width: 100%;
 }
 .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1.5rem;
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap: 1.5rem;
 }
 .footer-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: var(--white);
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.5rem;
+font-weight: 600;
+letter-spacing: 2px;
+color: var(--white);
 }
 .footer-logo span {
-  color: var(--accent-gold);
+color: var(--accent-gold);
 }
 .footer-links {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+display: flex;
+gap: 2rem;
+flex-wrap: wrap;
+justify-content: center;
 }
 .footer-links a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', sans-serif;
-  transition: color 0.3s;
+color: rgba(255, 255, 255, 0.8);
+text-decoration: none;
+font-size: 0.9rem;
+font-family: 'Montserrat', sans-serif;
+transition: color 0.3s;
 }
 .footer-links a:hover {
-  color: var(--accent-gold);
+color: var(--accent-gold);
 }
 .footer-divider {
-  width: 100%;
-  max-width: 600px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 1rem 0;
+width: 100%;
+max-width: 600px;
+height: 1px;
+background: rgba(255, 255, 255, 0.1);
+margin: 1rem 0;
 }
 .footer-copyright {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.85rem;
-  font-family: 'Montserrat', sans-serif;
+color: rgba(255, 255, 255, 0.6);
+font-size: 0.85rem;
+font-family: 'Montserrat', sans-serif;
 }
 .footer-copyright a {
-  color: var(--accent-gold);
-  text-decoration: none;
+color: var(--accent-gold);
+text-decoration: none;
 }
-
-/* ========================================== */
-/* RESPONSIVIDADE - MOBILE E TABLET */
-/* ========================================== */
-
-/* Tablet (até 968px) */
 @media (max-width: 968px) {
-  .hero {
-    margin-top: 100px;
-    padding: 6rem 1.5rem;
-    min-height: 600px;
-  }
-  .hero h2 {
-    font-size: 3rem;
-  }
-  .hero-description {
-    font-size: 1.1rem;
-  }
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  .btn-whatsapp-large,
-  .btn-secondary-hero {
-    width: 100%;
-    max-width: 350px;
-    justify-content: center;
-  }
-  section {
-    padding: 4rem 1.5rem;
-  }
-  .section-title h2 {
-    font-size: 2.2rem;
-  }
-  .features-grid,
-  .team-grid,
-  .problems-grid,
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
-  .feature-card {
-    padding: 2rem;
-  }
-  .team-photo {
-    height: 300px;
-  }
-  .team-content {
-    padding: 2rem;
-  }
-  .airline-problems {
-    padding: 3rem 2rem;
-  }
-  .airline-problems h3 {
-    font-size: 2rem;
-  }
-  .contact-container {
-    gap: 2rem;
-  }
-  .contact-cta h3 {
-    font-size: 2rem;
-  }
-  .nav-links {
-    display: none;
-  }
-  .hamburger-menu {
-    display: flex;
-  }
-  /* Menu Mobile Dropdown */
-  .nav-links.mobile-active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--white);
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    gap: 1.5rem;
-  }
-  .nav-links.mobile-active a {
-    font-size: 1rem;
-    padding: 0.5rem 0;
-  }
-  .nav-links.mobile-active .btn-whatsapp {
-    width: 100%;
-    justify-content: center;
-  }
-  .logo-main {
-    font-size: 1.4rem;
-    letter-spacing: 2px;
-  }
-  .logo-sub {
-    font-size: 0.65rem;
-    letter-spacing: 6px;
-  }
-  .logo-line {
-    width: 100px;
-  }
+.hero {
+margin-top: 100px;
+padding: 6rem 1.5rem;
+min-height: 600px;
 }
-
-/* Mobile (até 640px) */
+.hero h2 {
+font-size: 3rem;
+}
+.hero-description {
+font-size: 1.1rem;
+}
+.hero-buttons {
+flex-direction: column;
+align-items: center;
+}
+.btn-whatsapp-large,
+.btn-secondary-hero {
+width: 100%;
+max-width: 350px;
+justify-content: center;
+}
+section {
+padding: 4rem 1.5rem;
+}
+.section-title h2 {
+font-size: 2.2rem;
+}
+.features-grid,
+.team-grid,
+.problems-grid,
+.contact-container {
+grid-template-columns: 1fr;
+}
+.feature-card {
+padding: 2rem;
+}
+.team-photo {
+height: 300px;
+}
+.team-content {
+padding: 2rem;
+}
+.airline-problems {
+padding: 3rem 2rem;
+}
+.airline-problems h3 {
+font-size: 2rem;
+}
+.contact-container {
+gap: 2rem;
+}
+.contact-cta h3 {
+font-size: 2rem;
+}
+.nav-links {
+display: none;
+}
+.hamburger-menu {
+display: flex;
+}
+.nav-links.mobile-active {
+display: flex;
+flex-direction: column;
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+background: var(--white);
+padding: 2rem;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+gap: 1.5rem;
+}
+.nav-links.mobile-active a {
+font-size: 1rem;
+padding: 0.5rem 0;
+}
+.nav-links.mobile-active .btn-whatsapp {
+width: 100%;
+justify-content: center;
+}
+.logo-main {
+font-size: 1.4rem;
+letter-spacing: 2px;
+}
+.logo-sub {
+font-size: 0.65rem;
+letter-spacing: 6px;
+}
+.logo-line {
+width: 100px;
+}
+}
 @media (max-width: 640px) {
-  .hero {
-    margin-top: 90px;
-    padding: 4rem 1rem;
-    min-height: 500px;
-  }
-  .hero h2 {
-    font-size: 2.2rem;
-    line-height: 1.2;
-  }
-  .hero-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-  .btn-whatsapp-large,
-  .btn-secondary-hero {
-    padding: 1rem 2rem;
-    font-size: 0.95rem;
-  }
-  .whatsapp-airplane {
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-  }
-  .whatsapp-airplane svg {
-    width: 30px;
-    height: 30px;
-  }
-  section {
-    padding: 3rem 1rem;
-  }
-  .section-title h2 {
-    font-size: 1.8rem;
-  }
-  .section-title p {
-    font-size: 1rem;
-  }
-  .about-intro {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-  .feature-card {
-    padding: 1.5rem;
-  }
-  .feature-icon {
-    width: 40px;
-    height: 40px;
-  }
-  .feature-card h3 {
-    font-size: 1.3rem;
-  }
-  .feature-card p {
-    font-size: 0.9rem;
-  }
-  .mission-section {
-    padding: 3rem 1.5rem;
-  }
-  .mission-section h3 {
-    font-size: 1.6rem;
-  }
-  .mission-section p {
-    font-size: 1rem;
-  }
-  .team-photo {
-    height: 250px;
-  }
-  .team-content {
-    padding: 1.5rem;
-  }
-  .team-content h3 {
-    font-size: 1.5rem;
-  }
-  .team-oab {
-    font-size: 0.8rem;
-  }
-  .team-content p {
-    font-size: 0.9rem;
-  }
-  .airline-problems {
-    padding: 2.5rem 1.5rem;
-  }
-  .airline-problems h3 {
-    font-size: 1.6rem;
-  }
-  .airline-problems > p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-  .problems-grid {
-    gap: 1.5rem;
-  }
-  .problem-item {
-    gap: 0.8rem;
-  }
-  .problem-icon {
-    width: 35px;
-    height: 35px;
-  }
-  .problem-icon svg {
-    width: 18px;
-    height: 18px;
-  }
-  .problem-content h4 {
-    font-size: 1rem;
-  }
-  .problem-content p {
-    font-size: 0.85rem;
-  }
-  .rights-info {
-    padding: 1.5rem;
-  }
-  .rights-info p {
-    font-size: 1rem;
-  }
-  .contact-cta h3 {
-    font-size: 1.6rem;
-  }
-  .contact-cta p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-  .btn-whatsapp-cta {
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    width: 100%;
-    justify-content: center;
-  }
-  .contact-info-box {
-    padding: 2rem 1.5rem;
-  }
-  .contact-info-icon {
-    width: 40px;
-    height: 40px;
-  }
-  .contact-info-icon svg {
-    width: 20px;
-    height: 20px;
-  }
-  .contact-info-details h4 {
-    font-size: 0.85rem;
-  }
-  .contact-info-details p {
-    font-size: 0.9rem;
-  }
-  .footer {
-    padding: 2rem 1rem;
-  }
-  .footer-logo {
-    font-size: 1.2rem;
-  }
-  .footer-links {
-    gap: 1rem;
-  }
-  .footer-links a {
-    font-size: 0.85rem;
-  }
-  .footer-copyright {
-    font-size: 0.8rem;
-  }
-  .logo-cb {
-    width: 60px;
-    height: 60px;
-  }
-  .logo-main {
-    font-size: 1.2rem;
-  }
-  .logo-sub {
-    font-size: 0.6rem;
-  }
-  .logo-line {
-    width: 80px;
-  }
-  nav {
-    padding: 0.8rem 1rem;
-  }
+.hero {
+margin-top: 90px;
+padding: 4rem 1rem;
+min-height: 500px;
 }
-
-/* Mobile Extra Pequeno (até 400px) */
+.hero h2 {
+font-size: 2.2rem;
+line-height: 1.2;
+}
+.hero-description {
+font-size: 1rem;
+margin-bottom: 2rem;
+}
+.btn-whatsapp-large,
+.btn-secondary-hero {
+padding: 1rem 2rem;
+font-size: 0.95rem;
+}
+.whatsapp-airplane {
+width: 60px;
+height: 60px;
+bottom: 20px;
+right: 20px;
+}
+.whatsapp-airplane svg {
+width: 30px;
+height: 30px;
+}
+section {
+padding: 3rem 1rem;
+}
+.section-title h2 {
+font-size: 1.8rem;
+}
+.section-title p {
+font-size: 1rem;
+}
+.about-intro {
+font-size: 1rem;
+margin-bottom: 2rem;
+}
+.feature-card {
+padding: 1.5rem;
+}
+.feature-icon {
+width: 40px;
+height: 40px;
+}
+.feature-card h3 {
+font-size: 1.3rem;
+}
+.feature-card p {
+font-size: 0.9rem;
+}
+.mission-section {
+padding: 3rem 1.5rem;
+}
+.mission-section h3 {
+font-size: 1.6rem;
+}
+.mission-section p {
+font-size: 1rem;
+}
+.team-photo {
+height: 250px;
+}
+.team-content {
+padding: 1.5rem;
+}
+.team-content h3 {
+font-size: 1.5rem;
+}
+.team-oab {
+font-size: 0.8rem;
+}
+.team-content p {
+font-size: 0.9rem;
+}
+.airline-problems {
+padding: 2.5rem 1.5rem;
+}
+.airline-problems h3 {
+font-size: 1.6rem;
+}
+.airline-problems > p {
+font-size: 1rem;
+margin-bottom: 2rem;
+}
+.problems-grid {
+gap: 1.5rem;
+}
+.problem-item {
+gap: 0.8rem;
+}
+.problem-icon {
+width: 35px;
+height: 35px;
+}
+.problem-icon svg {
+width: 18px;
+height: 18px;
+}
+.problem-content h4 {
+font-size: 1rem;
+}
+.problem-content p {
+font-size: 0.85rem;
+}
+.rights-info {
+padding: 1.5rem;
+}
+.rights-info p {
+font-size: 1rem;
+}
+.contact-cta h3 {
+font-size: 1.6rem;
+}
+.contact-cta p {
+font-size: 1rem;
+margin-bottom: 2rem;
+}
+.btn-whatsapp-cta {
+padding: 1rem 2rem;
+font-size: 1rem;
+width: 100%;
+justify-content: center;
+}
+.contact-info-box {
+padding: 2rem 1.5rem;
+}
+.contact-info-icon {
+width: 40px;
+height: 40px;
+}
+.contact-info-icon svg {
+width: 20px;
+height: 20px;
+}
+.contact-info-details h4 {
+font-size: 0.85rem;
+}
+.contact-info-details p {
+font-size: 0.9rem;
+}
+.footer {
+padding: 2rem 1rem;
+}
+.footer-logo {
+font-size: 1.2rem;
+}
+.footer-links {
+gap: 1rem;
+}
+.footer-links a {
+font-size: 0.85rem;
+}
+.footer-copyright {
+font-size: 0.8rem;
+}
+.logo-cb {
+width: 60px;
+height: 60px;
+}
+.logo-main {
+font-size: 1.2rem;
+}
+.logo-sub {
+font-size: 0.6rem;
+}
+.logo-line {
+width: 80px;
+}
+nav {
+padding: 0.8rem 1rem;
+}
+/* Botões WhatsApp Responsivos */
+.btn-whatsapp-about,
+.btn-whatsapp-team,
+.btn-whatsapp-services {
+width: 100%;
+justify-content: center;
+}
+}
 @media (max-width: 400px) {
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-  .hero-description {
-    font-size: 0.9rem;
-  }
-  .btn-whatsapp-large,
-  .btn-secondary-hero {
-    padding: 0.9rem 1.5rem;
-    font-size: 0.85rem;
-  }
-  .section-title h2 {
-    font-size: 1.5rem;
-  }
-  .logo-main {
-    font-size: 1rem;
-  }
-  .logo-sub {
-    display: none;
-  }
-  .logo-line {
-    display: none;
-  }
+.hero h2 {
+font-size: 1.8rem;
+}
+.hero-description {
+font-size: 0.9rem;
+}
+.btn-whatsapp-large,
+.btn-secondary-hero {
+padding: 0.9rem 1.5rem;
+font-size: 0.85rem;
+}
+.section-title h2 {
+font-size: 1.5rem;
+}
+.logo-main {
+font-size: 1rem;
+}
+.logo-sub {
+display: none;
+}
+.logo-line {
+display: none;
+}
 }
 </style>
 </head>
 <body>
 <!-- Header com Logo CB -->
 <header>
-  <nav>
-    <div class="logo-container">
-      <!-- IMAGEM DA LOGO -->
-      <img src="ChatGPT Image 4 de mar. de 2026, 15_30_34-Photoroom.png" alt="Catelan e Barbosa Advocacia Logo" class="logo-cb">
-      
-      <div class="logo-text">
-        <h1 class="logo-main">CATELAN & BARBOSA</h1>
-        <div class="logo-line"></div>
-        <p class="logo-sub">ADVOCACIA</p>
-      </div>
-    </div>
-    
-    <!-- Menu Hambúrguer Mobile -->
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#inicio" onclick="toggleMenu()">Início</a></li>
-      <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
-      <li><a href="#equipe" onclick="toggleMenu()">Equipe</a></li>
-      <li><a href="#servicos" onclick="toggleMenu()">Serviços</a></li>
-      <li>
-        <a href="https://wa.me/5517991223326?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
-          class="btn-whatsapp"
-          target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-          </svg>
-          Fale Conosco
-        </a>
-      </li>
-    </ul>
-  </nav>
+<nav>
+<div class="logo-container">
+<img src="ChatGPT Image 4 de mar. de 2026, 15_30_34-Photoroom.png" alt="Catelan e Barbosa Advocacia Logo" class="logo-cb">
+<div class="logo-text">
+<h1 class="logo-main">CATELAN & BARBOSA</h1>
+<div class="logo-line"></div>
+<p class="logo-sub">ADVOCACIA</p>
+</div>
+</div>
+<div class="hamburger-menu" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="#inicio" onclick="toggleMenu()">Início</a></li>
+<li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+<li><a href="#equipe" onclick="toggleMenu()">Equipe</a></li>
+<li><a href="#servicos" onclick="toggleMenu()">Serviços</a></li>
+<li>
+<a href="https://wa.me/5517991223326?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+class="btn-whatsapp"
+target="_blank">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+</svg>
+Fale Conosco
+</a>
+</li>
+</ul>
+</nav>
 </header>
-
 <!-- Ícone de Avião Flutuante WhatsApp -->
 <a href="https://wa.me/5517991223326?text=Olá!%20Gostaria%20de%20mais%20informações."
-  class="whatsapp-airplane"
-  target="_blank"
-  title="Fale conosco pelo WhatsApp">
-  <svg viewBox="0 0 24 24">
-    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-  </svg>
+class="whatsapp-airplane"
+target="_blank"
+title="Fale conosco pelo WhatsApp">
+<svg viewBox="0 0 24 24">
+<path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+</svg>
 </a>
-
 <!-- Hero Section -->
 <section class="hero" id="inicio">
-  <div class="hero-video-background">
-    <video autoplay muted loop playsinline poster="poster-image.jpg">
-      <source src="video aviao asa.mp4" type="video/mp4">
-      Seu navegador não suporta vídeos HTML5.
-    </video>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h2>Soluções Jurídicas em Direito Aéreo</h2>
-    <p class="hero-description">Especialistas em defesa dos direitos dos passageiros contra companhias aéreas. Protegemos você em casos de voos cancelados, atrasados, overbooking e muito mais.</p>
-    <div class="hero-buttons">
-      <a href="https://wa.me/5517991223326?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
-        class="btn-whatsapp-large"
-        target="_blank">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-        Agende uma Consulta
-      </a>
-      <a href="#servicos" class="btn-secondary-hero">
-        Conheça Nossos Serviços
-      </a>
-    </div>
-  </div>
+<div class="hero-video-background">
+<video autoplay muted loop playsinline poster="poster-image.jpg">
+<source src="video aviao asa.mp4" type="video/mp4">
+Seu navegador não suporta vídeos HTML5.
+</video>
+</div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h2>Soluções Jurídicas em Direito Aéreo</h2>
+<p class="hero-description">Especialistas em defesa dos direitos dos passageiros contra companhias aéreas. Protegemos você em casos de voos cancelados, atrasados, overbooking e muito mais.</p>
+<div class="hero-buttons">
+<a href="https://wa.me/5517991223326?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
+class="btn-whatsapp-large"
+target="_blank">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+</svg>
+Agende uma Consulta
+</a>
+<a href="#servicos" class="btn-secondary-hero">
+Conheça Nossos Serviços
+</a>
+</div>
+</div>
 </section>
-
 <!-- About Section -->
 <section id="sobre">
-  <div class="section-title">
-    <h2>Sobre o Catelan e Barbosa Advocacia</h2>
-  </div>
-  <p class="about-intro">
-    Escritório especializado em Direito Aéreo e do Consumidor, com foco principal na defesa dos direitos dos passageiros contra companhias aéreas. Oferecemos assessoria jurídica completa para proteger seus direitos em voos domésticos e internacionais.
-  </p>
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
-      </div>
-      <h3>Especialização Comprovada</h3>
-      <p>Expertise reconhecida em ações contra companhias aéreas por cancelamentos, atrasos, extravio de bagagem e overbooking.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-          <line x1="9" y1="9" x2="15" y2="9"></line>
-          <line x1="9" y1="15" x2="15" y2="15"></line>
-        </svg>
-      </div>
-      <h3>Foco no Passageiro</h3>
-      <p>Soluções estratégicas para passageiros que enfrentam problemas com companhias aéreas nacionais e internacionais.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="8" r="7"></circle>
-          <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-        </svg>
-      </div>
-      <h3>Resultados Consistentes</h3>
-      <p>Histórico comprovado de sucesso em indenizações contra companhias aéreas com atendimento personalizado.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"></circle>
-          <circle cx="12" cy="12" r="3"></circle>
-        </svg>
-      </div>
-      <h3>Abordagem Personalizada</h3>
-      <p>Cada caso é único. Desenvolvemos estratégias customizadas para suas necessidades específicas.</p>
-    </div>
-  </div>
-  <div class="mission-section">
-    <h3>Nossa Missão</h3>
-    <p>Proporcionar soluções jurídicas eficazes e estratégicas, protegendo os direitos dos passageiros em questões relacionadas a companhias aéreas com excelência, ética e comprometimento.</p>
-  </div>
+<div class="section-title">
+<h2>Sobre o Catelan e Barbosa Advocacia</h2>
+</div>
+<p class="about-intro">
+Escritório especializado em Direito Aéreo e do Consumidor, com foco principal na defesa dos direitos dos passageiros contra companhias aéreas. Oferecemos assessoria jurídica completa para proteger seus direitos em voos domésticos e internacionais.
+</p>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+<h3>Especialização Comprovada</h3>
+<p>Expertise reconhecida em ações contra companhias aéreas por cancelamentos, atrasos, extravio de bagagem e overbooking.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+<line x1="9" y1="9" x2="15" y2="9"></line>
+<line x1="9" y1="15" x2="15" y2="15"></line>
+</svg>
+</div>
+<h3>Foco no Passageiro</h3>
+<p>Soluções estratégicas para passageiros que enfrentam problemas com companhias aéreas nacionais e internacionais.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="8" r="7"></circle>
+<polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+</svg>
+</div>
+<h3>Resultados Consistentes</h3>
+<p>Histórico comprovado de sucesso em indenizações contra companhias aéreas com atendimento personalizado.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="10"></circle>
+<circle cx="12" cy="12" r="3"></circle>
+</svg>
+</div>
+<h3>Abordagem Personalizada</h3>
+<p>Cada caso é único. Desenvolvemos estratégias customizadas para suas necessidades específicas.</p>
+</div>
+</div>
+<div class="mission-section">
+<h3>Nossa Missão</h3>
+<p>Proporcionar soluções jurídicas eficazes e estratégicas, protegendo os direitos dos passageiros em questões relacionadas a companhias aéreas com excelência, ética e comprometimento.</p>
+</div>
+<!-- ========================================== -->
+<!-- BOTÃO WHATSAPP ADICIONADO - SEÇÃO SOBRE -->
+<!-- ========================================== -->
+<div class="about-cta-container">
+<a href="https://wa.me/5517991223326?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20escritório."
+class="btn-whatsapp-about"
+target="_blank">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+</svg>
+Fale Conosco Sobre Nosso Trabalho
+</a>
+</div>
 </section>
-
 <!-- Team Section -->
 <section class="team-section" id="equipe">
-  <div class="section-title">
-    <h2>Conheça Nossa Equipe</h2>
-    <p>Advogadas especializadas prontas para defender seus direitos</p>
-  </div>
-  <div class="team-grid">
-    <div class="team-card">
-      <img src="helena.jpeg" alt="Dra. Helena Catelan" class="team-photo">
-      <div class="team-content">
-        <h3>Dra. Helena Catelan</h3>
-        <span class="team-oab">Dra. Helena Catelan Soares de Carvalho – OAB/SP 454.821</span>
-        <p>Atuação especializada em Direito do Consumidor e Direito de Família, com atendimento ético, claro e personalizado. Defesa dos seus direitos em problemas com empresas, companhias aéreas, cobranças indevidas e reembolsos, além de divórcio, guarda, pensão alimentícia e inventário.</p>
-        <a href="#contato" class="team-link">
-          Conheça o trabalho da Dra. Helena →
-        </a>
-      </div>
-    </div>
-    <div class="team-card">
-      <img src="mariana.jpeg" alt="Dra. Mariana Barbosa Leite" class="team-photo">
-      <div class="team-content">
-        <h3>Dra. Mariana Barbosa Leite</h3>
-        <span class="team-oab">Dra. Mariana Barbosa Leite – OAB/SP 491.921</span>
-        <p>Advogada especializada em Direito do Consumidor e Direito Bancário, pós-graduada em Direito Civil. Atua há mais de 4 anos na defesa dos consumidores, com foco no combate a práticas abusivas de instituições financeiras e grandes empresas.</p>
-        <a href="#contato" class="team-link">
-          Conheça o trabalho da Dra. Mariana →
-        </a>
-      </div>
-    </div>
-  </div>
+<div class="section-title">
+<h2>Conheça Nossa Equipe</h2>
+<p>Advogadas especializadas prontas para defender seus direitos</p>
+</div>
+<div class="team-grid">
+<div class="team-card">
+<img src="helena.jpeg" alt="Dra. Helena Catelan" class="team-photo">
+<div class="team-content">
+<h3>Dra. Helena Catelan</h3>
+<span class="team-oab">Dra. Helena Catelan Soares de Carvalho – OAB/SP 454.821</span>
+<p>Atuação especializada em Direito do Consumidor e Direito de Família, com atendimento ético, claro e personalizado. Defesa dos seus direitos em problemas com empresas, companhias aéreas, cobranças indevidas e reembolsos, além de divórcio, guarda, pensão alimentícia e inventário.</p>
+<a href="#contato" class="team-link">
+Conheça o trabalho da Dra. Helena →
+</a>
+</div>
+</div>
+<div class="team-card">
+<img src="mariana.jpeg" alt="Dra. Mariana Barbosa Leite" class="team-photo">
+<div class="team-content">
+<h3>Dra. Mariana Barbosa Leite</h3>
+<span class="team-oab">Dra. Mariana Barbosa Leite – OAB/SP 491.921</span>
+<p>Advogada especializada em Direito do Consumidor e Direito Bancário, pós-graduada em Direito Civil. Atua há mais de 4 anos na defesa dos consumidores, com foco no combate a práticas abusivas de instituições financeiras e grandes empresas.</p>
+<a href="#contato" class="team-link">
+Conheça o trabalho da Dra. Mariana →
+</a>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- BOTÃO WHATSAPP ADICIONADO - SEÇÃO EQUIPE -->
+<!-- ========================================== -->
+<div class="team-cta-container">
+<a href="https://wa.me/5517991223326?text=Olá!%20Gostaria%20de%20falar%20com%20uma%20das%20advogadas."
+class="btn-whatsapp-team"
+target="_blank">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+</svg>
+Fale com Nossas Advogadas
+</a>
+</div>
 </section>
-
 <!-- Practice Areas -->
 <section class="practice-areas" id="servicos">
-  <div class="section-title">
-    <h2>Áreas de Atuação</h2>
-  </div>
-  <div class="airline-problems">
-    <div class="practice-video-background">
-      <video autoplay muted loop playsinline>
-        <source src="video aeroporto.mp4" type="video/mp4">
-        Seu navegador não suporta vídeos HTML5.
-      </video>
-    </div>
-    <div class="practice-overlay"></div>
-    <h3>Problemas com Companhia Aérea?</h3>
-    <p>Você passou por alguma dessas situações?</p>
-    <div class="problems-grid">
-      <div class="problem-item">
-        <div class="problem-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </div>
-        <div class="problem-content">
-          <h4>Voo atrasado ou cancelado</h4>
-          <p>Sem aviso prévio ou com grande atraso.</p>
-        </div>
-      </div>
-      <div class="problem-item">
-        <div class="problem-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </div>
-        <div class="problem-content">
-          <h4>Reembolso não pago</h4>
-          <p>Valor não devolvido após cancelamento.</p>
-        </div>
-      </div>
-      <div class="problem-item">
-        <div class="problem-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </div>
-        <div class="problem-content">
-          <h4>Bagagem extraviada</h4>
-          <p>Perda, dano ou atraso na entrega.</p>
-        </div>
-      </div>
-      <div class="problem-item">
-        <div class="problem-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </div>
-        <div class="problem-content">
-          <h4>Overbooking</h4>
-          <p>Embarque negado com passagem confirmada.</p>
-        </div>
-      </div>
-      <div class="problem-item">
-        <div class="problem-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </div>
-        <div class="problem-content">
-          <h4>Mudança de voo</h4>
-          <p>Alteração de horário, rota ou data.</p>
-        </div>
-      </div>
-      <div class="problem-item">
-        <div class="problem-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </div>
-        <div class="problem-content">
-          <h4>Perda de conexão</h4>
-          <p>Atraso que causou prejuízos.</p>
-        </div>
-      </div>
-      <div class="problem-item">
-        <div class="problem-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </div>
-        <div class="problem-content">
-          <h4>Falta de assistência</h4>
-          <p>Sem alimentação, hotel ou comunicação.</p>
-        </div>
-      </div>
-      <div class="problem-item">
-        <div class="problem-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </div>
-        <div class="problem-content">
-          <h4>Cobranças indevidas</h4>
-          <p>Taxas abusivas ou valores não informados.</p>
-        </div>
-      </div>
-    </div>
-    <div class="rights-info">
-      <p>Saiba que a legislação brasileira e internacional protege os passageiros aéreos. Você pode ter direito a reembolso integral, indenização por danos materiais e morais, e assistência durante a espera.</p>
-    </div>
-  </div>
+<div class="section-title">
+<h2>Áreas de Atuação</h2>
+</div>
+<div class="airline-problems">
+<div class="practice-video-background">
+<video autoplay muted loop playsinline>
+<source src="video aeroporto.mp4" type="video/mp4">
+Seu navegador não suporta vídeos HTML5.
+</video>
+</div>
+<div class="practice-overlay"></div>
+<h3>Problemas com Companhia Aérea?</h3>
+<p>Você passou por alguma dessas situações?</p>
+<div class="problems-grid">
+<div class="problem-item">
+<div class="problem-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<div class="problem-content">
+<h4>Voo atrasado ou cancelado</h4>
+<p>Sem aviso prévio ou com grande atraso.</p>
+</div>
+</div>
+<div class="problem-item">
+<div class="problem-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<div class="problem-content">
+<h4>Reembolso não pago</h4>
+<p>Valor não devolvido após cancelamento.</p>
+</div>
+</div>
+<div class="problem-item">
+<div class="problem-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<div class="problem-content">
+<h4>Bagagem extraviada</h4>
+<p>Perda, dano ou atraso na entrega.</p>
+</div>
+</div>
+<div class="problem-item">
+<div class="problem-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<div class="problem-content">
+<h4>Overbooking</h4>
+<p>Embarque negado com passagem confirmada.</p>
+</div>
+</div>
+<div class="problem-item">
+<div class="problem-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<div class="problem-content">
+<h4>Mudança de voo</h4>
+<p>Alteração de horário, rota ou data.</p>
+</div>
+</div>
+<div class="problem-item">
+<div class="problem-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<div class="problem-content">
+<h4>Perda de conexão</h4>
+<p>Atraso que causou prejuízos.</p>
+</div>
+</div>
+<div class="problem-item">
+<div class="problem-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<div class="problem-content">
+<h4>Falta de assistência</h4>
+<p>Sem alimentação, hotel ou comunicação.</p>
+</div>
+</div>
+<div class="problem-item">
+<div class="problem-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<div class="problem-content">
+<h4>Cobranças indevidas</h4>
+<p>Taxas abusivas ou valores não informados.</p>
+</div>
+</div>
+</div>
+<div class="rights-info">
+<p>Saiba que a legislação brasileira e internacional protege os passageiros aéreos. Você pode ter direito a reembolso integral, indenização por danos materiais e morais, e assistência durante a espera.</p>
+</div>
+<!-- ========================================== -->
+<!-- BOTÃO WHATSAPP ADICIONADO - SEÇÃO SERVIÇOS -->
+<!-- ========================================== -->
+<div class="services-cta-container">
+<a href="https://wa.me/5517991223326?text=Olá!%20Preciso%20de%20ajuda%20com%20um%20problema%20na%20companhia%20aérea."
+class="btn-whatsapp-services"
+target="_blank">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+</svg>
+Preciso de Ajuda com Meu Caso
+</a>
+</div>
+</div>
 </section>
-
 <!-- Contact Section -->
 <section class="contact-section" id="contato">
-  <div class="section-title">
-    <h2>Entre em Contato</h2>
-    <p>Agende uma consulta e descubra como podemos ajudar a resolver sua situação.</p>
-  </div>
-  <div class="contact-container">
-    <div class="contact-cta">
-      <h3>Pronto para Resolver seu Problema?</h3>
-      <p>Não deixe seus direitos serem negligenciados. Entre em contato conosco agora mesmo e receba orientação especializada sobre seu caso com a companhia aérea.</p>
-      <a href="https://wa.me/5517991223326?text=Olá!%20Preciso%20de%20ajuda%20com%20um%20problema%20na%20companhia%20aérea."
-        class="btn-whatsapp-cta"
-        target="_blank">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-        Fale Conosco Agora
-      </a>
-    </div>
-    <div class="contact-info-box">
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-          </svg>
-        </div>
-        <div class="contact-info-details">
-          <h4>Telefone / WhatsApp</h4>
-          <p><strong>(17) 99122-3326</strong><br>Atendimento imediato</p>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-        </div>
-        <div class="contact-info-details">
-          <h4>E-mail</h4>
-          <p><strong>juridico@catelanebarbosa.adv.br</strong><br>Respondemos em até 24h</p>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-        </div>
-        <div class="contact-info-details">
-          <h4>Horário de Atendimento</h4>
-          <p><strong>Segunda a Sexta</strong><br>09:00 às 17:00</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="section-title">
+<h2>Entre em Contato</h2>
+<p>Agende uma consulta e descubra como podemos ajudar a resolver sua situação.</p>
+</div>
+<div class="contact-container">
+<div class="contact-cta">
+<h3>Pronto para Resolver seu Problema?</h3>
+<p>Não deixe seus direitos serem negligenciados. Entre em contato conosco agora mesmo e receba orientação especializada sobre seu caso com a companhia aérea.</p>
+<a href="https://wa.me/5517991223326?text=Olá!%20Preciso%20de%20ajuda%20com%20um%20problema%20na%20companhia%20aérea."
+class="btn-whatsapp-cta"
+target="_blank">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+</svg>
+Fale Conosco Agora
+</a>
+</div>
+<div class="contact-info-box">
+<div class="contact-info-item">
+<div class="contact-info-icon">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+</svg>
+</div>
+<div class="contact-info-details">
+<h4>Telefone / WhatsApp</h4>
+<p><strong>(17) 99122-3326</strong><br>Atendimento imediato</p>
+</div>
+</div>
+<div class="contact-info-item">
+<div class="contact-info-icon">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</div>
+<div class="contact-info-details">
+<h4>E-mail</h4>
+<p><strong>juridico@catelanebarbosa.adv.br</strong><br>Respondemos em até 24h</p>
+</div>
+</div>
+<div class="contact-info-item">
+<div class="contact-info-icon">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<div class="contact-info-details">
+<h4>Horário de Atendimento</h4>
+<p><strong>Segunda a Sexta</strong><br>09:00 às 17:00</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- Footer -->
 <footer>
-  <div class="footer-content">
-    <div class="footer-logo">
-      CATELAN <span>&</span> BARBOSA <span>ADVOCACIA</span>
-    </div>
-    
-  </div>
+<div class="footer-content">
+<div class="footer-logo">
+CATELAN <span>&</span> BARBOSA <span>ADVOCACIA</span>
+</div>
+</div>
 </footer>
-
 <script>
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
 });
-
+}
+});
+});
 // Menu Mobile Toggle
 function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  const hamburger = document.querySelector('.hamburger-menu');
-  navLinks.classList.toggle('mobile-active');
-  hamburger.classList.toggle('active');
+const navLinks = document.getElementById('navLinks');
+const hamburger = document.querySelector('.hamburger-menu');
+navLinks.classList.toggle('mobile-active');
+hamburger.classList.toggle('active');
 }
-
 // Fechar menu ao clicar fora
 document.addEventListener('click', function(e) {
-  const navLinks = document.getElementById('navLinks');
-  const hamburger = document.querySelector('.hamburger-menu');
-  if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-    navLinks.classList.remove('mobile-active');
-    hamburger.classList.remove('active');
-  }
+const navLinks = document.getElementById('navLinks');
+const hamburger = document.querySelector('.hamburger-menu');
+if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+navLinks.classList.remove('mobile-active');
+hamburger.classList.remove('active');
+}
 });
 </script>
 </body>
